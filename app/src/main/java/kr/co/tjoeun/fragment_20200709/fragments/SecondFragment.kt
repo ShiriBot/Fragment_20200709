@@ -22,7 +22,11 @@ class SecondFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         secondfragBtn.setOnClickListener {
-//            Toast.makeText(this, "버튼 이벤트입니다.", Toast.LENGTH_SHORT).show()
+//            makeText의 첫번째 재료 : 어느 화면에 띄울지.
+//            this : 프래그먼트=> 화면이 아님. (에러 발생)
+//            화면을 넣어주자 => 나(프래그먼트)를 들고 있는 액티비티 대입
+//             => activity 변수 사용.
+            Toast.makeText(activity, "버튼 이벤트입니다.", Toast.LENGTH_SHORT).show()
         }
     }
 
