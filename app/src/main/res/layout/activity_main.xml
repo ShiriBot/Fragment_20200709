@@ -7,16 +7,31 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <fragment
-        android:tag="firstFrag"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        class="kr.co.tjoeun.fragment_20200709.fragments.FirstFragment"/>
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+        <fragment
+            class="kr.co.tjoeun.fragment_20200709.fragments.FirstFragment"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:tag="firstFrag" />
 
-    <fragment
-        android:tag="secondFrag"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        class="kr.co.tjoeun.fragment_20200709.fragments.SecondFragment"/>
+        <fragment
+            class="kr.co.tjoeun.fragment_20200709.fragments.SecondFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:tag="secondFrag" />
+
+        <fragment
+            class="kr.co.tjoeun.fragment_20200709.fragments.FirstFragment"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:tag="anotherFistFrag" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>
